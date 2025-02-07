@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brands - DrapeX</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('background.jpg') no-repeat center center/cover;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #333;
+        }
+
+        header {
+            background-color: #b30000; /* Dark Red */
+            color: #fff;
+            padding: 1.5rem;
+            font-size: 2rem;
+            font-weight: bold;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .brand-list {
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+            gap: 20px;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        .brand {
+            background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+            padding: 1rem;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            width: 200px;
+            height: 230px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            background: white;
+            position: relative;
+        }
+
+        .brand:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .brand img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px; /* Slightly rounded */
+        }
+
+        .brand h2 {
+            color: #b30000; /* Dark Red for brand name */
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .brand p {
+            font-size: 0.9rem;
+            margin: 5px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.8rem 1.5rem;
+            background: green;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .back-link:hover {
+            background: darkgreen;
+        }
+
+        footer {
+            background-color: brown;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 0;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: #ffc107;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            background-color: #8B0000;
+            color: #fff;
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        header .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #FFD700;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1.2rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            background: #FFD700;
+            color: #8B0000;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">DrapeX</div>
+            <nav>
+                <ul>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="brands.html">Brands</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="brand-list">
+        <div class="brand">
+            <img src="nike.jpg" alt="Nike Logo">
+            <h2>Nike</h2>
+            <p>Sporty and stylish, Nike is a leading brand in athletic wear and footwear.</p>
+        </div>
+        <div class="brand">
+            <img src="adidas.png" alt="Adidas Logo">
+            <h2>Adidas</h2>
+            <p>Adidas blends performance and fashion, offering sportswear for all.</p>
+        </div>
+        <div class="brand">
+            <img src="zara.png" alt="Zara Logo">
+            <h2>Zara</h2>
+            <p>Trendy and sophisticated, Zara is a top name in modern fashion.</p>
+        </div>
+        <div class="brand">
+            <img src="hm.png" alt="H&M Logo">
+            <h2>H&M</h2>
+            <p>Affordable yet stylish fashion for every occasion, from casual to formal.</p>
+        </div>
+        <div class="brand">
+            <img src="lv.jpg" alt="Louis Vuitton Logo">
+            <h2>Louis Vuitton</h2>
+            <p>Luxury meets elegance in Louis Vuitton's iconic fashion pieces.</p>
+        </div>
+        <div class="brand">
+            <img src="gucci.png" alt="Gucci Logo">
+            <h2>Gucci</h2>
+            <p>High-end Italian fashion brand known for bold and stylish designs.</p>
+        </div>
+        <div class="brand">
+            <img src="parada.png" alt="Prada Logo">
+            <h2>Prada</h2>
+            <p>Prada defines sophistication and innovation in luxury fashion.</p>
+        </div>
+        <div class="brand">
+            <img src="dior.png" alt="Dior Logo">
+            <h2>Dior</h2>
+            <p>Dior combines elegance and modern style in every collection.</p>
+        </div>
+    </div>
+
+    <a href="index.html" class="back-link">Back to Home</a>
+
+    <footer>
+        <p>&copy; 2025 DrapeX. All rights reserved. | <a href="#privacy">Privacy Policy</a></p>
+    </footer>
+
+</body>
+</html>

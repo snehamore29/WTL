@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - DrapeX</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f9f4f0;
+            margin-top: 5rem;
+            padding: 0;
+            text-align: center;
+            color: #333;
+        }
+
+        header {
+            background-color: #b30000;
+            color: #fff;
+            padding: 2rem;
+            font-size: 2rem;
+            font-weight: bold;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            letter-spacing: 2px;
+        }
+
+        .about-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: bisque;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .about-container:hover {
+            transform: translateY(-5px);
+        }
+
+        .about-container h2 {
+            font-family: 'Playfair Display', serif;
+            color: #b30000;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .about-container p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+            padding: 0 20px;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: url('abus2.avif') no-repeat center center/cover;
+            padding: 60px 20px;
+            margin-top: 30px;
+            color: white;
+            position: relative;
+        }
+
+        .testimonials::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+            backdrop-filter: blur(5px); /* Blurred effect */
+            z-index: 0;
+        }
+
+        .testimonials h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .testimonial {
+            display: none;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .testimonial.active {
+            display: block;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .testimonial p {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        .customer-name {
+            font-weight: bold;
+            font-size: 1.3rem;
+            color: #ffd700;
+        }
+
+        /* Navigation Buttons */
+        .nav-buttons {
+            margin-top: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .nav-buttons button {
+            background: #ffd700;
+            color: black;
+            border: none;
+            padding: 10px 15px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 5px;
+            transition: background 0.3s;
+            font-weight: bold;
+        }
+
+        .nav-buttons button:hover {
+            background: #ffcc00;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Back Button */
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.8rem 1.5rem;
+            background: green;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .back-link:hover {
+            background: darkgreen;
+        }
+
+        footer {
+            background-color: brown;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 0;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: #ffc107;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            background-color: #8B0000;
+            color: #fff;
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        header .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #FFD700;
+        }
+
+        main {
+            margin-top: 8rem;
+            padding: 2rem;
+            flex: 1;
+            color: #fff;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1.2rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            background: #FFD700;
+            color: #8B0000;
+        }
+
+        
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">DrapeX</div>
+            <nav>
+                <ul>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="brands.html">Brands</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="about-container">
+        <h2>Welcome to DrapeX</h2>
+        <p>At <b>DrapeX</b>, we believe fashion is an expression of identity. From **luxury brands** to **streetwear staples**, we bring you carefully curated collections that define your style.</p>
+        <p>Started as an **Instagram store**, we've grown into a trusted online destination for trendsetters who appreciate quality and elegance.</p>
+    </div>
+
+    <div class="testimonials">
+        <h2>What Our Customers Say</h2>
+
+        <div class="testimonial active">
+            <p>"Absolutely love the collection! The quality is unmatched, and the customer service is exceptional. I’ll definitely shop again!"</p>
+            <p class="customer-name">- Sushant Naik</p>
+        </div>
+
+        <div class="testimonial">
+            <p>"Fast delivery and stunning outfits! The athleisure section is my favorite. 100% recommend!"</p>
+            <p class="customer-name">- Swaroop Magar</p>
+        </div>
+
+        <div class="testimonial">
+            <p>"I was skeptical about ordering online, but Clothing Haven exceeded my expectations. The fabrics feel so premium!"</p>
+            <p class="customer-name">- Sakshi Murade</p>
+        </div>
+
+        <div class="testimonial">
+            <p>"A fantastic place for fashion lovers. Their limited-edition drops are worth the hype!"</p>
+            <p class="customer-name">- Sarthak Mahale</p>
+        </div>
+
+        <div class="nav-buttons">
+            <button onclick="prevTestimonial()">&#10094; Prev</button>
+            <button onclick="nextTestimonial()">Next &#10095;</button>
+        </div>
+    </div>
+
+    <a href="index.html" class="back-link">Back to Home</a>
+
+    <script>
+        let currentIndex = 0;
+        let testimonials = document.querySelectorAll(".testimonial");
+
+        function showTestimonial(index) {
+            testimonials.forEach((testimonial, i) => {
+                testimonial.classList.remove("active");
+                if (i === index) {
+                    testimonial.classList.add("active");
+                }
+            });
+        }
+
+        function prevTestimonial() {
+            currentIndex = (currentIndex === 0) ? testimonials.length - 1 : currentIndex - 1;
+            showTestimonial(currentIndex);
+        }
+
+        function nextTestimonial() {
+            currentIndex = (currentIndex === testimonials.length - 1) ? 0 : currentIndex + 1;
+            showTestimonial(currentIndex);
+        }
+    </script>
+<footer>
+    <p>&copy; 2025 DrapeX. All rights reserved. | <a href="#privacy">Privacy Policy</a></p>
+</footer>
+
+</body>
+</html>
